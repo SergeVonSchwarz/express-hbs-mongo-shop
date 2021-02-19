@@ -1,0 +1,51 @@
+.nav-wrapper {
+    padding: 0 2rem;
+}
+
+.brand-logo {
+    padding-left: 2rem;
+}
+
+.card .card-image {
+    width: 100px !important;
+}
+
+.course {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.course h1 {
+    margin-bottom: 2rem;
+}
+
+.course img {
+    max-width: 300px;
+    height: auto;
+}
+
+.card-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.auth-block {
+    margin-top: 1rem;
+}
+
+.alert {
+    padding: 1rem;
+    background: #ee6e73;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.avatar {
+    max-width: 200px;
+    height: auto;
+}

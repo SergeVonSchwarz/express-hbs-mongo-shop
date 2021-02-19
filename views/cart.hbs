@@ -1,0 +1,40 @@
+<h1>Cart</h1>
+
+<div class="cart-container">
+    {{#if courses.length}}
+    <table id="cart-table">
+        <thead>
+            <tr>
+                {{!-- <th>N</th> --}}
+                <th>Name</th>
+                <th>Count</th>
+                <th>Price</th>
+                {{!-- <th>Sum</th> --}}
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each courses}}
+            <tr>
+                <td class="price-title">{{title}}</td>
+                <td class="price-count">{{count}}</td>
+                <td class="price cart-price">{{price}}</td>
+                {{!-- <td class="price cart-full-price">{{countPrice}}</td> --}}
+                <td>
+                    <button data-csrf="{{@root.csrf}}" data-id="{{_id}}"
+                        class="btn btn-small delete-course">Delete</button>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <h5>Total: <span class="price cart-total-price">{{price}}</span></h5>
+    <form action="/orders" method="POST">
+        <input type="hidden" name="_csrf" value="{{csrf}}">
+        <button type="submit" class="btn">Order</button>
+    </form>
+    {{else}}
+    <p>Cart empty</p>
+    {{/if}}
+</div>
